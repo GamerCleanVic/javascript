@@ -3,17 +3,29 @@
 <head>
 <meta charset="utf-8" />
 <title>TREINOS JAVASCRIPT</title>
+<link rel="stylesheet" type="text/css" href="css/js1.css" src="" />
 </head>
 <body>
 	<h1>TÍTULO DO TEXTO</h1>
 	<p>Parágrafo teste um.</p>
 	<script>
-		console.log("He4rtDevs <3");
-		console.log(123);
-		console.log([1,2,3]);
-		console.log({ curso: "js4noobs"});
-		const boolean = false; //Error
-		console.assert(boolean, "mensagem a ser exibida se o boolean for falso");
+		//console.log("He4rtDevs <3");
+		//console.log(123);
+		//console.log([1,2,3]);
+		//console.log({ curso: "js4noobs"});
+		//const boolean = false; //Error
+		//console.assert(boolean, "mensagem a ser exibida se o boolean for falso");
+		let label = "";
+		function consoleLabel(){
+			console.count(label);
+			return "label: "+label;
+		}
+		label = "he4rt";
+		consoleLabel();
+		label = "devs";
+		consoleLabel();
+		consoleLabel();
+		console.count();
 	</script>
 </body>
 </html>
