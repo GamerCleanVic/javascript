@@ -10,10 +10,20 @@
 	<p>Abra o console e veja o script final do dia.</p>
 	<p id="txt1"></p>
 	<script>
+		
 		const p1 = document.getElementById("txt1");
-		const valor = 8;
-		const texto = `Valor: ${8}`;
-		p1.insertAdjacentHTML("afterend","Nº 1 = "+valor+"<br>"+texto);
+		let num1 = "2";
+		num1 = +num1 + 1;
+		let num2 = 2;
+		if(num1 <= num2){
+			p1.insertAdjacentHTML("afterend","Verdadeiro!<br>");
+			console.log("Verdadeiro!");
+		}
+		else{
+			p1.insertAdjacentHTML("afterend","Falso!<br>");
+			console.log("Falso!");
+		}
+
 	</script>
 </body>
 </html>
