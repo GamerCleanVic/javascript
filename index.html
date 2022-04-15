@@ -12,17 +12,15 @@
 	<script>
 		
 		const p1 = document.getElementById("txt1");
-		let num1 = "2";
-		num1 = +num1 + 1;
+		let num1 = 3;
 		let num2 = 2;
-		if(num1 <= num2){
-			p1.insertAdjacentHTML("afterend","Verdadeiro!<br>");
-			console.log("Verdadeiro!");
-		}
-		else{
-			p1.insertAdjacentHTML("afterend","Falso!<br>");
-			console.log("Falso!");
-		}
+		const multi = ( function (num1, num2){
+		/*	p1.insertAdjacentHTML("afterend","<div style='border:2px solid #ccc; color:#ccc; padding:2px; width:100px; text-align:center;'>"+num1+" + "+i+" = "+(num1 + i)+"</div>"+"<br>"); */
+			/*console.log(num1+" + "+i+" = "+(num1 + i)); */
+			return num1 * num2;
+		})(num1, num2);
+		p1.insertAdjacentHTML("afterend",num1+" x "+num2+" = "+multi);
+		console.log(num1+" x "+num2+" = "+multi);
 
 	</script>
 </body>
