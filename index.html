@@ -9,18 +9,21 @@
 	<h1>ESTUDO DO DIA</h1>
 	<p>Abra o console e veja o script final do dia.</p>
 	<p id="txt1"></p>
+	<p id="txt2"></p>
 	<script>
 		
 		const p1 = document.getElementById("txt1");
-		let num1 = 3;
-		let num2 = 2;
-		const multi = ( function (num1, num2){
+		const p2 = document.getElementById("txt2");
+		
 		/*	p1.insertAdjacentHTML("afterend","<div style='border:2px solid #ccc; color:#ccc; padding:2px; width:100px; text-align:center;'>"+num1+" + "+i+" = "+(num1 + i)+"</div>"+"<br>"); */
 			/*console.log(num1+" + "+i+" = "+(num1 + i)); */
-			return num1 * num2;
-		})(num1, num2);
-		p1.insertAdjacentHTML("afterend",num1+" x "+num2+" = "+multi);
-		console.log(num1+" x "+num2+" = "+multi);
+
+	const numeros = [1,2,3,4,5]
+	const novoTamanho = numeros.push(6,7,8,9)
+	console.log("A junção de numeros com novoTamanho = "+numeros)
+	console.log("O tamanho do vetor agora = "+novoTamanho)
+	p1.insertAdjacentHTML("afterend","A junção de numeros com novoTamanho = "+numeros+"<br><br><br><br>");
+	p2.insertAdjacentHTML("afterend","O tamanho do vetor agora = "+novoTamanho);
 
 	</script>
 </body>
