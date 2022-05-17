@@ -18,13 +18,18 @@
 		/*	p1.insertAdjacentHTML("afterend","<div style='border:2px solid #ccc; color:#ccc; padding:2px; width:100px; text-align:center;'>"+num1+" + "+i+" = "+(num1 + i)+"</div>"+"<br>"); */
 			/*console.log(num1+" + "+i+" = "+(num1 + i)); */
 
-	/* Array - Unshift */
-	const numeros = [5,6,7,8]
-	const novoTamanho = numeros.unshift(1,2,3,4);
-	console.log("Todos os nºs = "+numeros)
-	console.log("Somente o último n° = "+novoTamanho)
-	p1.insertAdjacentHTML("afterend","Todos os nºs = "+numeros+"<br>");
-	p2.insertAdjacentHTML("afterend","Somente o último n° = "+novoTamanho);
+	/* LÓGICA / ALGORITMO - SALÁRIOS */
+	/*const bebidas = ["Café","Suco de Laranja"]*/
+	let ht = 160;
+	let ha = 1212 / 160;
+	let d = (1212 * 11)/100;
+	let sb = ht * ha;
+	let sL = sb - d;
+
+	console.log("O Salário Bruto = "+sb+" e o Salário Líquido = "+sL);
+	p1.insertAdjacentHTML("afterend","O Salário Bruto = "+sb+" e o Salário Líquido = "+sL);
+	/* console.log("Somente o último o 1º nº = "+elemRemovido) */
+	/*p2.insertAdjacentHTML("afterend","Somente o último o 1º nº = "+elemRemovido); */
 
 	</script>
 </body>
