@@ -2,3 +2,61 @@ body{
 background-color:#1b1b1b;
 color:#ccc;
 }
+.container{
+background-color:lightgreen;
+color:darkgreen;
+border-radius:10px;
+padding-right:3px;
+padding-left:3px;
+padding-top:1px;
+padding-bottom:2px;
+margin-right:5px;
+margin-left:5px;
+}
+h2{
+text-align:center;
+}
+h1{
+margin-right:5px;
+margin-left:5px;
+}
+.form1{
+display:grid;
+grid-template-columns:auto (1fr 1fr);
+gap:10px;
+}
+.caixa1{
+border-radius:5px;
+border:solid 2px darkgreen;
+height:30px;
+}
+.btn1{
+background-color:darkgreen;
+color:white;
+border-radius:5px;
+height:30px;
+font-weight:bold;
+font-size:80%;
+}
+.btn1:hover{
+background-color:#dbdb39;
+color:darkgreen;
+}
+.btn1:active{
+background-color:#ccc;
+color:darkgreen;
+}
+.bgResult{
+background-color:#fff;
+border:solid 2px darkgreen;
+border-radius:5px;
+padding:5px;
+padding-top:7px;
+padding-bottom:10px;
+font-size:20px;
+}
+/* .texto1{
+border:solid 2px blue;
+padding:4px;
+} */
+
