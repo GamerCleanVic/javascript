@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.useWebExt": true,
+    "liveServer.settings.fullReload": true,
+    "vscode-edge-devtools.browserFlavor": "Stable",
+    "liveServer.settings.useBrowserPreview": true,
+    "liveServer.settings.CustomBrowser": null
+}
