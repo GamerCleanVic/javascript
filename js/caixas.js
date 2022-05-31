@@ -20,7 +20,7 @@ function enviar(){
 	/* var aux2 = document.getElementById("caixa2").value; */
 	
 	if(document.getElementById("caixa1").value == ""){
-		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>DIGITE 1 SALÁRIO EM NºS INTEIROS!</a>");
+		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE ALGO!</a>");
 	}
 	else if(document.getElementById("caixa1").value === 0){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
@@ -28,17 +28,19 @@ function enviar(){
 	
 			/* ATRIBUIÇÃO */
 			/* document.location.reload(true); */
-			var char = 0;
+			var char = "a";
 			/* var rua = 25; */
-			char = parseInt(aux1);
+			char = aux1;
 			/* rua = parseInt(aux2); */
+
+
 			
 			
-			if(char >= 30 && char <= 90){
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+char+" está no intervalo de 30 a 90!"+"</font></p>");
+			if(char === "Cachorro" || char === "Gato"){
+				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Vendo animal!"+"</font></p>");
 			}
 			else{
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+char+" não está no intervalo de 30 a 90!"+"</font></p>");
+				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Não vendo esse tipo de animal!"+"</font></p>");
 			}
 
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 1 é char."); */
