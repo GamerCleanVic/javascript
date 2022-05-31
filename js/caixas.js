@@ -36,11 +36,11 @@ function enviar(){
 
 			
 			
-			if(char === "Cachorro" || char === "Gato"){
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Vendo animal!"+"</font></p>");
+			if(char === "Cachorro" || char === "Gato" || char === "cachorro" || char === "gato" || char === "CACHORRO" || char === "GATO"){
+				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Opa, vendemos sim "+char+"!"+"</font></p>");
 			}
 			else{
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Não vendo esse tipo de animal!"+"</font></p>");
+				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Desculpe, não vendemos "+char+"!"+"</font></p>");
 			}
 
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 1 é char."); */
