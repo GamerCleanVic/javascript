@@ -36,7 +36,7 @@ function enviar(){
 
 			
 			
-			if(char === "Cachorro" || char === "Gato" || char === "cachorro" || char === "gato" || char === "CACHORRO" || char === "GATO"){
+			if(char.toLowerCase() === "cachorro" || char.toLowerCase() === "gato"){
 				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Opa, vendemos sim "+char+"!"+"</font></p>");
 			}
 			else{
