@@ -37,7 +37,7 @@ function enviar(){
 			
 			
 			if(char.toLowerCase() === "cachorro" || char.toLowerCase() === "gato"){
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Opa, vendemos sim "+char+"!"+"</font></p>");
+				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Opa, vendemos "+char+" sim!"+"</font></p>");
 			}
 			else{
 				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Desculpe, não vendemos "+char+"!"+"</font></p>");
