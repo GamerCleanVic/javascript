@@ -28,21 +28,24 @@ function enviar(){
 	
 			/* ATRIBUIÇÃO */
 			/* document.location.reload(true); */
-			var char = "a";
+			var x = 4;
+			var y = 3;
+			var w = parseInt(aux1);
+			var z = 0;
 			/* var rua = 25; */
-			char = aux1;
+			
 			/* rua = parseInt(aux2); */
 
+			if(w > 4){
+				z = parseInt((x + y) + w);
+				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"z = "+"("+x+" + "+y+") + "+w+", onde w = número digitado: "+w+"<br>Então z = "+z+"</font></p>");
 
-			
-			
-			if(char.toLowerCase() === "cachorro" || char.toLowerCase() === "gato"){
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Opa, vendemos "+char+" sim!"+"</font></p>");
 			}
 			else{
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"Desculpe, não vendemos "+char+"!"+"</font></p>");
+				z = parseInt((x - y) + w);
+				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"z = "+"("+x+" - "+y+") + "+w+", onde w = número digitado: "+w+"<br>Então z = "+z+"</font></p>");
 			}
-
+			
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 1 é char."); */
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+char+" + "+rua+" = "+(char + rua)+"</font></p>"); */
 			/* p2.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 2 é rua."); */
