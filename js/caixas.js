@@ -26,24 +26,22 @@ function enviar(){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
 	}
 	
-			/* ATRIBUIÇÃO */
+			/* RODÍZIO DE PIZZA */
 			/* document.location.reload(true); */
-			var x = 4;
-			var y = 3;
-			var w = parseInt(aux1);
-			var z = 0;
+			
+			var garcon = "a";
+			garcon = aux1;
+			
 			/* var rua = 25; */
 			
 			/* rua = parseInt(aux2); */
-
-			if(w > 4){
-				z = parseInt((x + y) + w);
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"z = "+"("+x+" + "+y+") + "+w+", onde w = número digitado: "+w+"<br>Então z = "+z+"</font></p>");
+			
+			if(garcon.toLowerCase() === "camarão"){	
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>Desculpe amigo, não quero pizza de ${garcon}</font></p>`);
 
 			}
 			else{
-				z = parseInt((x - y) + w);
-				p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+"z = "+"("+x+" - "+y+") + "+w+", onde w = número digitado: "+w+"<br>Então z = "+z+"</font></p>");
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>Opa, muito obg amigo pela pizza de ${garcon}, você é um amigo, amigo!</font></p>`);
 			}
 			
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 1 é char."); */
@@ -55,5 +53,5 @@ function enviar(){
 			/* console.log("O Salário Bruto = "+sb+" e o Salário Líquido = "+sL);
 			p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O Salário Bruto = "+sb+" e o Salário Líquido = "+sL+"</font></p>"); */
 			
-			document.getElementById("btnRepetir").innerHTML = "<div style='display:flex; flex-direction:column; align-items:center; justify-content:space-between;'><a href='index.html' class='btnAfter' style='text-align:center; text-decoration:none; width:280px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:darkgreen; color:#d9d9d9; border-radius:5px; border:1px solid lightgreen; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>TESTE OUTRO VALOR</a></div>";
+			document.getElementById("btnRepetir").innerHTML = "<div style='display:flex; flex-direction:column; align-items:center; justify-content:space-between;'><a href='index.html' class='btnAfter' style='text-align:center; text-decoration:none; width:280px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:darkgreen; color:#d9d9d9; border-radius:5px; border:1px solid lightgreen; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>TESTE OUTRO SABOR</a></div>";
 } 
