@@ -17,33 +17,43 @@ function enviar(){
 	const h2TT = document.getElementById("tituloCaixa1");
 
 	var aux1 = document.getElementById("caixa1").value;
-	/* var aux2 = document.getElementById("caixa2").value; */
+	var aux2 = document.getElementById("caixa2").value;
 	
 	if(document.getElementById("caixa1").value == ""){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE ALGO!</a>");
 	}
-	else if(document.getElementById("caixa1").value === 0){
+	else if(document.getElementById("caixa1").value == 0){
+		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
+	}
+	else if(document.getElementById("caixa2").value == ""){
+		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE ALGO!</a>");
+	}
+	else if(document.getElementById("caixa2").value == 0){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
 	}
 	
-			/* RODÍZIO DE PIZZA */
+			/* NÚMERO > QUE 30? */
 			/* document.location.reload(true); */
 			
-			var garcon = "a";
-			garcon = aux1;
+			var num1 = 0;
+			//var num2 = 0;
+			var tempo = 0;
+			var bonus = 0;
+			num1 = parseFloat(aux1);
+			tempo = parseInt(aux2);
+			//num2 = parseFloat(aux2);
 			
 			/* var rua = 25; */
-			
+			//num1.toLowerCase()
 			/* rua = parseInt(aux2); */
 			
-			if(garcon.toLowerCase() === "camarão"){	
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>Desculpe amigo, não quero pizza de ${garcon}</font></p>`);
-
+			if(tempo >= 4){	
+				bonus = parseFloat(num1 * 0.30);				
 			}
 			else{
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>Opa, muito obg amigo pela pizza de ${garcon}, você é um amigo, amigo!</font></p>`);
+				bonus = parseFloat(num1 * 0.15);			
 			}
-			
+			p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>O valor do bônus é: ${bonus}!</font></p>`);
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 1 é char."); */
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+char+" + "+rua+" = "+(char + rua)+"</font></p>"); */
 			/* p2.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 2 é rua."); */
@@ -53,5 +63,5 @@ function enviar(){
 			/* console.log("O Salário Bruto = "+sb+" e o Salário Líquido = "+sL);
 			p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O Salário Bruto = "+sb+" e o Salário Líquido = "+sL+"</font></p>"); */
 			
-			document.getElementById("btnRepetir").innerHTML = "<div style='display:flex; flex-direction:column; align-items:center; justify-content:space-between;'><a href='index.html' class='btnAfter' style='text-align:center; text-decoration:none; width:280px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:darkgreen; color:#d9d9d9; border-radius:5px; border:1px solid lightgreen; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>TESTE OUTRO SABOR</a></div>";
+			document.getElementById("btnRepetir").innerHTML = "<div style='display:flex; flex-direction:column; align-items:center; justify-content:space-between;'><a href='index.html' class='btnAfter' style='text-align:center; text-decoration:none; width:280px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:darkgreen; color:#d9d9d9; border-radius:5px; border:1px solid lightgreen; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>TESTE OUTROS VALORES</a></div>";
 } 
