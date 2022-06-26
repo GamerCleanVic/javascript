@@ -48,10 +48,10 @@ function enviar(){
 			/* rua = parseInt(aux2); */
 			
 			if(tempo >= 4){	
-				bonus = parseFloat(num1 * 0.30);				
+				bonus = parseFloat(num1 * 0.30);
 			}
 			else{
-				bonus = parseFloat(num1 * 0.15);			
+				bonus = parseFloat(num1 * 0.15);
 			}
 			p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>O valor do bônus é: ${bonus}!</font></p>`);
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 1 é char."); */
