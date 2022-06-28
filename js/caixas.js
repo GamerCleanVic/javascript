@@ -18,6 +18,8 @@ function enviar(){
 
 	var aux1 = document.getElementById("caixa1").value;
 	var aux2 = document.getElementById("caixa2").value;
+	var aux3 = document.getElementById("caixa2").value;
+	var aux4 = document.getElementById("caixa2").value;
 	
 	if(document.getElementById("caixa1").value == ""){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE ALGO!</a>");
@@ -32,28 +34,36 @@ function enviar(){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
 	}
 	
-			/* NÚMERO > QUE 30? */
+			/* ALG. SOMA*/
 			/* document.location.reload(true); */
-			
-			var num1 = 0;
-			//var num2 = 0;
-			var tempo = 0;
-			var bonus = 0;
+			var num1 = 0;			
+			var num2 = 0;
+			var num3 = 0;
+			var num4 = 0;
+			var media = 0;
 			num1 = parseFloat(aux1);
-			tempo = parseInt(aux2);
-			//num2 = parseFloat(aux2);
-			
-			/* var rua = 25; */
-			//num1.toLowerCase()
-			/* rua = parseInt(aux2); */
-			
-			if(tempo >= 4){	
-				bonus = parseFloat(num1 * 0.30);
+			num2 = parseFloat(aux2);
+			num3 = parseFloat(aux3);
+			num4 = parseFloat(aux4);
+			media = ((num1 + num2 + num3 + num4) / 4);
+
+			if(media >= 7){
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>A média do aluno = ${media}, portanto o aluno está aprovado!</font></p>`);
+			}
+			else if(media < 7 && media >= 5){
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>A média do aluno = ${media}, portanto o aluno está de recuperação!</font></p>`);
 			}
 			else{
-				bonus = parseFloat(num1 * 0.15);
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>A média do aluno = ${media}, portanto o aluno está reprovado!</font></p>`);
 			}
-			p1.insertAdjacentHTML("afterend",`<p class='bgResult'><font class='texto1'>O valor do bônus é: ${bonus}!</font></p>`);
+			
+			
+			//num2 = parseFloat(aux2);
+			
+			//num1.toLowerCase()
+			/* rua = parseInt(aux2); */
+						
+			
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 1 é char."); */
 			/* p1.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>"+char+" + "+rua+" = "+(char + rua)+"</font></p>"); */
 			/* p2.insertAdjacentHTML("afterend","<p class='bgResult'><font class='texto1'>O nome da variáve 2 é rua."); */

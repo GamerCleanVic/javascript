@@ -43,7 +43,7 @@ font-weight:bold;
 font-size:80%;
 }
 .btn1:hover{
-background-color:#dbdb39;
+background-color:#ddff99;
 color:darkgreen;
 }
 .btn1:active{
@@ -59,6 +59,63 @@ padding-top:7px;
 padding-bottom:10px;
 font-size:20px;
 color:#00802b;
+text-shadow: none;
+}
+.ref0{
+display:grid;
+grid-template-columns: 1fr 1fr;
+row-gap: 2px;;
+text-align: center;
+margin: 7px;
+text-shadow: none;
+font-weight: bold;
+}
+.ref1{
+text-decoration: none;
+background-color: #00802b;
+color:#fff;
+border-radius: 5px;
+padding: 3px;
+margin-right: 10px;
+border:solid 2px #000;
+border-bottom-color: #000;
+border-top-color: grey;
+border-right-color: #000;
+border-left-color: grey;
+}
+.ref1:hover{
+    background-color:#ddff99;
+    color:darkgreen;
+    }
+.ref1:active{
+    background-color:#ccc;
+    color:darkgreen;
+}
+.ref2{
+    text-decoration: none;
+    background-color: #00802b;
+    color:#fff;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 10px;
+    border:solid 2px #000;
+    border-bottom-color: #000;
+    border-top-color: grey;
+    border-right-color: #000;
+    border-left-color: grey;
+}
+.ref2:hover{
+    background-color:#ddff99;
+    color:darkgreen;
+    }
+.ref2:active{
+    background-color:#ccc;
+    color:darkgreen;
+}
+.colab{
+color: #00802b;
+margin-top: 70px;
+margin-bottom: 0px;
 text-shadow: none;
 }
 /* .texto1{
