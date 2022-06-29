@@ -118,8 +118,64 @@ margin-top: 70px;
 margin-bottom: 0px;
 text-shadow: none;
 }
+
 /* .texto1{
 border:solid 2px blue;
 padding:4px;
 } */
-
+.ref3{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    margin: 7px;
+    text-shadow: none;
+    font-weight: bold;
+}
+.ref4{
+    text-decoration: none;
+    background-color: #00802b;
+    color:#fff;
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 10px;
+    border:solid 2px #000;
+    border-bottom-color: #000;
+    border-top-color: grey;
+    border-right-color: #000;
+    border-left-color: grey;
+    }
+    .ref4:hover{
+        background-color:#ddff99;
+        color:darkgreen;
+        }
+    .ref4:active{
+        background-color:#ccc;
+        color:darkgreen;
+    }
+    .ref4{
+        text-decoration: none;
+        background-color: #00802b;
+        color:#fff;
+        border-radius: 5px;
+        padding: 3px;
+        margin-left: 10px;
+        border:solid 2px #000;
+        border-bottom-color: #000;
+        border-top-color: grey;
+        border-right-color: #000;
+        border-left-color: grey;
+    }
+    .ref4:hover{
+        background-color:#ddff99;
+        color:darkgreen;
+        }
+    .ref4:active{
+        background-color:#ccc;
+        color:darkgreen;
+    }
+    .colab2{
+    color: #00802b;
+    margin-bottom: 0px;
+    text-shadow: none;
+    }
