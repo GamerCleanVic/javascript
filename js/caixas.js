@@ -37,23 +37,24 @@ function enviar(){
 			/* ALG. SOMA*/
 			/* document.location.reload(true); */
 			var num1 = 0;			
-			var soma = 0;
-			var aux2 = 0;
-			var aux3 = 1;
-			num1 = parseInt(aux1);
-			aux2 = num1;
-			soma += (aux2 + 1);			
+			var quadra = 0;
+		
+			num1 = parseInt(aux1);		
 			
-			while(soma < 200){
+			if((num1%2)!=0){
 				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
 					<font class='texto1'>
-					${num1} + ${aux3} = ${soma}<br />
+					${num1}² = ${num1*num1}<br />
 					</font>
-				</p>`);			
-				soma++;
-				aux3++;				
+				</p>`);				
 			}
-						
+			else{
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+					<font class='texto1'>
+						O resto de ${num1} / 2 = ${num1%2}, então encerra a questão!<br />
+					</font>
+				</p>`);
+			}			
 			
 			//num2 = parseFloat(aux2);
 			
