@@ -17,7 +17,7 @@ function enviar(){
 	const h2TT = document.getElementById("tituloCaixa1");
 
 	var aux1 = document.getElementById("caixa1").value;
-	//var aux2 = document.getElementById("caixa2").value;
+	var aux2 = document.getElementById("caixa2").value;
 	//var aux3 = document.getElementById("caixa2").value;
 	//var aux4 = document.getElementById("caixa2").value;
 	
@@ -27,35 +27,32 @@ function enviar(){
 	else if(document.getElementById("caixa1").value == 0){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
 	}
-	/* else if(document.getElementById("caixa2").value == ""){
+	else if(document.getElementById("caixa2").value == ""){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE ALGO!</a>");
 	}
 	else if(document.getElementById("caixa2").value == 0){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
-	} */
+	}
 	
 			/* ALG. SOMA*/
 			/* document.location.reload(true); */
-			var num1 = 0;			
-			var quadra = 0;
+			let num1 = 0;
+			let num2 = 0;			
+			let total = 0;
 		
-			num1 = parseInt(aux1);		
+			num1 = parseInt(aux1);
+			num2 = parseInt(aux2);	
 			
-			if((num1%2)!=0){
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
-					<font class='texto1'>
-					${num1}² = ${num1*num1}<br />
-					</font>
-				</p>`);				
+			function multi (num1, num2){
+				total = num1 * num2;
+				return total;						
 			}
-			else{
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
-					<font class='texto1'>
-						O resto de ${num1} / 2 = ${num1%2}, então encerra a questão!<br />
-					</font>
-				</p>`);
-			}			
-			
+			let resul = multi(num1,num2);
+			p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+				<font class='texto1'>
+					${num1} x ${num2} = ${resul}
+				</font>
+			</p>`);
 			//num2 = parseFloat(aux2);
 			
 			//num1.toLowerCase()
