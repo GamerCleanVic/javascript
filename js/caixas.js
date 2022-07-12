@@ -1,5 +1,5 @@
 function toLimit(string = ""){
-	string.value = string.value.substring(0,16);
+	string.value = string.value.substring(0,2);
 }
 
 var btnEnviar = document.querySelector('.btn1')
@@ -16,7 +16,7 @@ function enviar(){
 	const btn2 = document.getElementById("btnRepetir");
 	const h2TT = document.getElementById("tituloCaixa1");
 
-	var aux1 = document.getElementById("caixa1").value;
+	let aux1 = document.getElementById("caixa1").value;
 	//var aux2 = document.getElementById("caixa2").value;
 	//var aux3 = document.getElementById("caixa2").value;
 	//var aux4 = document.getElementById("caixa2").value;
@@ -34,9 +34,9 @@ function enviar(){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
 	} */
 	
-			/* ALG. SOMA*/
+			/* ALG. MÊS PELO Nº DIGITADO*/
 			/* document.location.reload(true); */
-			let num = 0;
+			
 			//let num2 = 0;			
 			//let soma = 0;
 					
@@ -44,18 +44,39 @@ function enviar(){
 			//num2 = parseInt(aux2);	
 			
 				//soma = num1 + num2;
-			var fibo = function (num = parseInt(aux1)){
-				if(num == 1 || num == 2) return 1;
-				else return fibo(num -1) + fibo(num -2);
+			function UserException(message){
+				this.message = message;
+				this.name = "UserException";
 			}
-				
-			p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
-				<font class='texto1'>
-					<div style="color: darkgreen; border: solid 2px darkgreen; padding-top: 3px; padding-bottom: 3px; padding-right: 4px; padding-left: 4px;">
-						Fibonacci = ${fibo(10)}
-					</div>
-				</font>
-			</p>`);
+			function getMonthName(mes){
+				mes = mes - 1;
+				let meses = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+				if(meses[mes] !== undefined){
+					return meses[mes];
+				}
+				else{
+					throw new UserException("MesInvalido");
+				}
+			}
+			try {
+				let meuMes = parseInt(aux1);
+				nomeMes = getMonthName(meuMes);
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+					<font class='texto1'>					
+						O mês é: ${nomeMes}	
+					</font>
+				</p>`);console.log(nomeMes);
+			}
+			catch (e){
+				nomeMes = "não informado";
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+					<font class='texto1'>					
+						${e.message}, ${e.name}	${console.log(e.message, e.name)}		
+					</font>
+				</p>`);
+			}
+			
+			
 			//num2 = parseFloat(aux2);
 			
 			//num1.toLowerCase()
