@@ -44,11 +44,11 @@ function enviar(){
 			//num2 = parseInt(aux2);	
 			
 				//soma = num1 + num2;
-				const numeros = [1,2]
+				const numeros = [1,3]
 				numeros[0] = parseInt(aux1);
 				numeros[1] = parseInt(aux2);
 				const apenasImpar = numeros.filter((number, indice, array) =>{
-					return numeros % 2 !== 0;
+					return number % 2 !== 0;
 				});
 			p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
 					<font class='texto1' >					
