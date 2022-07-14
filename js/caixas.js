@@ -17,7 +17,7 @@ function enviar(){
 	const h2TT = document.getElementById("tituloCaixa1");
 
 	let aux1 = document.getElementById("caixa1").value;
-	//var aux2 = document.getElementById("caixa2").value;
+	let aux2 = document.getElementById("caixa2").value;
 	//var aux3 = document.getElementById("caixa2").value;
 	//var aux4 = document.getElementById("caixa2").value;
 	
@@ -27,14 +27,14 @@ function enviar(){
 	else if(document.getElementById("caixa1").value == 0){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
 	}
-	/* else if(document.getElementById("caixa2").value == ""){
+	else if(document.getElementById("caixa2").value == ""){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE ALGO!</a>");
 	}
 	else if(document.getElementById("caixa2").value == 0){
 		document.write("<a href='index.html' style='text-align:center; text-decoration:none; width:400px; height:80px; font-weight:bold; font-size:25px; display:flex; flex-direction:row; justify-content:center; align-items:center; background-color:#6600ff; color:#d9d9d9; border-radius:5px; border:1px solid #6600ff; box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #d9d9d9;'>CLICK E DIGITE 1 Nº INTEIRO DIFERENTE DE ZERO!</a>");
-	} */
+	}
 	
-			/* ALG. MÊS PELO Nº DIGITADO*/
+			/* ARRAY FILTER*/
 			/* document.location.reload(true); */
 			
 			//let num2 = 0;			
@@ -44,37 +44,28 @@ function enviar(){
 			//num2 = parseInt(aux2);	
 			
 				//soma = num1 + num2;
-			function UserException(message){
-				this.message = message;
-				this.name = "UserException";
-			}
-			function getMonthName(mes){
-				mes = mes - 1;
-				let meses = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-				if(meses[mes] !== undefined){
-					return meses[mes];
-				}
-				else{
-					throw new UserException("MesInvalido");
-				}
-			}
-			try {
-				let meuMes = parseInt(aux1);
-				nomeMes = getMonthName(meuMes);
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
-					<font class='texto1'>					
-						O mês é: ${nomeMes}	
+				const numeros = [1,2]
+				numeros[0] = parseInt(aux1);
+				numeros[1] = parseInt(aux2);
+				const apenasImpar = numeros.filter((number, indice, array) =>{
+					return numeros % 2 !== 0;
+				});
+			p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+					<font class='texto1' >					
+						Do vetor:
+						<div style='border:solid 2px darkgreen; padding:3px; margin-bottom:3px; color: darkgreen;'>
+							${numeros[0]}
+						</div>
+						<div style='border:solid 2px darkgreen; padding:3px; margin-bottom:3px; color: darkgreen;'>
+							${numeros[1]}
+						</div>
+						<div style='color: darkgreen; margin-bottom:3px; margin-top:14px;'>
+							Só ${parseInt(apenasImpar)} é ímpar!
+						</div>
 					</font>
-				</p>`);console.log(nomeMes);
-			}
-			catch (e){
-				nomeMes = "não informado";
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
-					<font class='texto1'>					
-						${e.message}, ${e.name}	${console.log(e.message, e.name)}		
-					</font>
-				</p>`);
-			}
+			</p>`);
+			console.log('Do vetor:');
+			console.log(`Só ${parseInt(apenasImpar)} é ímpar!`);
 			
 			
 			//num2 = parseFloat(aux2);
