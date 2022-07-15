@@ -50,21 +50,7 @@ function enviar(){
 				const apenasImpar = numeros.filter((number, indice, array) =>{
 					return number % 2 !== 0;
 				});
-			if(numeros[0] % 2 == 0 && numeros[1] % 2 == 0){
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
-					<font class='texto1' style='margin-bottom:3px; color: darkgreen;'>					
-						Do vetor, nenhum ímpar foi detectado!						
-					</font>
-			</p>`);
-			}
-			else if(numeros[0] % 2 !== 0 && numeros[1] % 2 !== 0){
-				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
-					<font class='texto1' style='margin-bottom:3px; color: darkgreen;'>					
-						Do vetor, ambos: ${numeros[0]} e ${numeros[1]} são ímpares!						
-					</font>
-			</p>`);
-			}
-			else{
+			if(apenasImpar % 2 !== 0  && numeros[0] !== numeros[1]){				
 				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
 						<font class='texto1' >					
 							Do vetor:
@@ -75,12 +61,33 @@ function enviar(){
 								${numeros[1]}
 							</div>
 							<div style='color: darkgreen; margin-bottom:3px; margin-top:14px;'>
-								Só ${parseInt(apenasImpar)} é ímpar!
+								Ambos: ${numeros[0]} e ${numeros[1]} são ímpares!
 							</div>
 						</font>
 				</p>`);
 				console.log('Do vetor:');
 				console.log(`Só ${parseInt(apenasImpar)} é ímpar!`);
+			}
+			else if(apenasImpar % 2 !== 0 && numeros[0] == numeros[1]){
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+					<font class='texto1' style='margin-bottom:3px; color: darkgreen;'>					
+						Do vetor, ambos são iguais e ímpares!						
+					</font>
+				</p>`);
+			}			
+			else if(apenasImpar % 2 == 0 && numeros[0] == numeros[1]){
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+					<font class='texto1' style='margin-bottom:3px; color: darkgreen;'>					
+						Do vetor, os nºs são iguais e nenhum deles é ímpar!						
+					</font>
+				</p>`);
+			}
+			else{
+				p1.insertAdjacentHTML("afterend",`<p class='bgResult'>
+					<font class='texto1' style='margin-bottom:3px; color: darkgreen;'>					
+						Do vetor, nenhum ímpar foi detectado!						
+					</font>
+				</p>`);
 			}
 			
 			//num2 = parseFloat(aux2);
